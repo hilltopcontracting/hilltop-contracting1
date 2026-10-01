@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hilltop Contracting | Farming Simulator 25</title>
+<meta name="description" content="Hilltop Contracting — a Farming Simulator 25 agricultural contracting community operating three 24/7 servers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b100c;--bg2:#101710;--card:#151d16;--card2:#192119;
+  --line:#29352b;--text:#f0f2ec;--muted:#98a39a;--green:#c84b43;
+  --green2:#ef756b;--gold:#d5a552;--display:'Oswald',sans-serif;--body:'DM Sans',sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.7) 1px,transparent 1px);background-size:80px 80px}
+a{color:inherit}.nav{height:82px;position:sticky;top:0;z-index:20;background:rgba(11,16,12,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 max(24px,6vw);gap:55px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}.logo-mark{height:43px;width:43px;display:grid;place-items:center;border:1px solid #6b3f3b;background:#211817;color:var(--green2);font:700 18px var(--display)}.logo b,.logo small{display:block}.logo b{font:700 20px var(--display);letter-spacing:1.5px;line-height:18px}.logo small{font:700 9px var(--display);letter-spacing:2px;color:var(--green)}
+.links{display:flex;gap:32px;flex:1}.links a{text-decoration:none;color:#89958b;font-size:12px;font-weight:600}.links a:hover,.links a.active{color:var(--text)}
+.nav-discord{background:var(--green);color:#10160f!important;padding:11px 17px}.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:65px max(24px,7vw);position:relative;overflow:hidden;background:radial-gradient(circle at 80% 45%,rgba(170,45,38,.25),transparent 36%),linear-gradient(100deg,#0b100c 25%,rgba(11,16,12,.75)),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero:after{content:"HILLTOP / EST. 2026";position:absolute;right:3vw;bottom:40px;writing-mode:vertical-rl;color:rgba(255,210,205,.16);font:600 10px var(--display);letter-spacing:3px}
+.kicker{font:600 11px var(--display);letter-spacing:2.5px;color:var(--green);text-transform:uppercase}.hero h1{font:700 clamp(62px,8vw,112px)/.86 var(--display);letter-spacing:1px;margin:23px 0}.hero h1 span{color:var(--green)}.hero p{max-width:550px;color:#adb6ae;line-height:1.75;font-size:15px}.buttons{display:flex;gap:12px;margin-top:30px}.btn{padding:13px 20px;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.8px;border:1px solid var(--green);transition:.2s}.btn.primary{background:var(--green);color:#10160f}.btn.primary:hover{background:var(--green2)}.btn.secondary{border-color:#435044;color:#bdc6be}.btn.secondary:hover{border-color:var(--green)}
+.hero-stat{justify-self:end;width:min(390px,100%);border:1px solid rgba(180,75,65,.25);background:rgba(10,15,11,.7);backdrop-filter:blur(12px);padding:27px}.hero-stat-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #303b31;padding-bottom:17px}.live{color:#e16a61;font:700 10px var(--display);letter-spacing:1.5px}.live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#e16a61;margin-right:6px;box-shadow:0 0 12px #e16a61}.hero-stat h3{font:600 25px var(--display);margin:23px 0}.stat-row{display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(55,68,57,.6);font-size:11px}.stat-row span{color:#748078}.stat-row b{font-weight:600}
+.section{padding:110px max(24px,7vw)}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}.section-head h2{font:600 48px/1 var(--display);margin:9px 0 0}.section-head p{max-width:390px;color:var(--muted);font-size:12px;line-height:1.7;margin:0}.intro{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;border-bottom:1px solid var(--line);padding-bottom:105px}.intro h2{font:600 48px/1.05 var(--display);margin:10px 0}.intro p{color:#a4aea5;line-height:1.85;font-size:14px;margin:0 0 18px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}.fact{border-left:2px solid var(--green);background:#111711;padding:17px}.fact b{display:block;font:600 27px var(--display)}.fact span{color:#69756c;font-size:9px;text-transform:uppercase;letter-spacing:1px}
+.server-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.server{border:1px solid var(--line);background:linear-gradient(145deg,var(--card2),var(--card));padding:25px;min-height:335px;position:relative;overflow:hidden;transition:.25s}.server:hover{transform:translateY(-5px);border-color:#704844}.server:after{content:"";position:absolute;right:-60px;bottom:-75px;width:190px;height:190px;border-radius:50%;border:1px solid rgba(200,75,67,.12)}.server-code{font:600 10px var(--display);color:#647066;letter-spacing:2px}.server h3{font:600 31px/1 var(--display);margin:17px 0 23px}.server h3 span{color:var(--green2)}.server-tags{display:flex;gap:7px}.server-tags span{border:1px solid #40302e;padding:5px 8px;color:#89958c;font:600 9px var(--display);letter-spacing:1px}.server-footer{position:absolute;bottom:24px;left:25px;right:25px;border-top:1px solid #2c382f;padding-top:16px;display:flex;justify-content:space-between;align-items:end}.online{color:#e16a61;font:600 10px var(--display);letter-spacing:1px}.online i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#e16a61;margin-right:5px}.server-link{font:600 10px var(--display);color:var(--green2);text-decoration:none}.players{display:block;color:#69756c;font-size:9px;margin-top:5px;letter-spacing:.4px}.player-count{font:600 9px var(--display);letter-spacing:.8px;color:#89958c;margin-left:auto;margin-right:18px}
+.personnel{background:#0d130e}.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.person{background:#141c15;border:1px solid var(--line);padding:20px;display:flex;align-items:center;gap:13px}.avatar{width:43px;height:43px;display:grid;place-items:center;background:#202a20;border:1px solid #543633;color:var(--green2);font:600 17px var(--display)}.person b{display:block;font-size:12px}.person small{display:block;color:#778279;font-size:10px;margin-top:4px}.role-title{grid-column:1/-1;color:#637066;font:600 10px var(--display);letter-spacing:2px;margin-top:14px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+.view-all{margin-top:25px;display:inline-block;color:var(--green2);font:600 11px var(--display);letter-spacing:1px;text-decoration:none}
+.cta{margin:20px max(24px,7vw) 110px;border:1px solid #5d3d39;background:linear-gradient(110deg,#172118,#111711);padding:55px 60px;display:flex;justify-content:space-between;align-items:center;gap:40px}.cta h2{font:600 45px var(--display);margin:8px 0}.cta p{color:#89958c;font-size:12px;max-width:550px;line-height:1.7}
+footer{border-top:1px solid var(--line);padding:30px max(24px,7vw);display:flex;justify-content:space-between;color:#657169;font:600 9px var(--display);letter-spacing:1.2px}
+.page-section{padding-top:115px}.personnel-full{display:grid;grid-template-columns:1fr 1fr;gap:12px}.group-title{grid-column:1/-1;color:var(--green);font:600 11px var(--display);letter-spacing:2px;margin-top:18px}
+@media(max-width:900px){.nav{gap:18px}.links{gap:15px}.hero{grid-template-columns:1fr;padding-top:90px;padding-bottom:90px}.hero-stat{justify-self:start;margin-top:45px}.intro{grid-template-columns:1fr;gap:25px}.server-grid,.people-grid{grid-template-columns:1fr}.cta{margin-left:24px;margin-right:24px;display:block}.cta .btn{display:inline-block;margin-top:15px}}
+@media(max-width:600px){.nav{height:68px;padding:0 15px}.links{display:none}.nav-discord{margin-left:auto}.logo b{font-size:17px}.hero{min-height:680px;padding:65px 24px}.hero h1{font-size:65px}.section{padding:80px 24px}.section-head{display:block}.section-head p{margin-top:15px}.intro h2,.section-head h2{font-size:39px}.facts{grid-template-columns:1fr}.cta{padding:35px 25px}.cta h2{font-size:37px}footer{display:block;text-align:center}footer p{margin:8px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#home">
+    <div class="logo-mark">HC</div>
+    <div><b>HILLTOP</b><small>CONTRACTING</small></div>
+  </a>
+  <nav class="links">
+    <a class="active" href="#home">Home</a>
+    <a href="#servers">Servers</a>
+    <a href="#personnel">Personnel</a>
+    <a href="#about">About</a>
+  </nav>
+  <a class="nav-discord btn" href="https://discord.gg/jy8a7P9GcS" target="_blank">JOIN DISCORD</a>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div>
+    <span class="kicker">FS25 Agricultural Contracting</span>
+    <h1>HILLTOP<br><span>CONTRACTING</span></h1>
+    <p>A dedicated Farming Simulator 25 community built around realistic agricultural operations, active members and three 24/7 servers across the United States.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#servers">EXPLORE OUR SERVERS →</a>
+      <a class="btn secondary" href="#about">ABOUT HILLTOP</a>
+    </div>
+  </div>
+  <aside class="hero-stat">
+    <div class="hero-stat-top"><span class="kicker">Operations overview</span><span class="live"><i></i>LIVE</span></div>
+    <h3>Company Status</h3>
+    <div class="stat-row"><span>Servers</span><b>3 / 3 Operational</b></div>
+    <div class="stat-row"><span>Availability</span><b>24 / 7</b></div>
+    <div class="stat-row"><span>Platform</span><b>Farming Simulator 25</b></div>
+    <div class="stat-row"><span>Player counts</span><b>Live / updating</b></div>
+  </aside>
+</section>
+
+<section id="about" class="section">
+  <div class="intro">
+    <div><span class="kicker">Who we are</span><h2>More than just<br><span style="color:var(--green)">a server.</span></h2></div>
+    <div>
+      <p>Hilltop Contracting is an FS25 agricultural contracting community focused on creating an active place for people to farm, contract and operate together.</p>
+      <p>Our operations run around the clock across three dedicated servers — Iowa, Arkansas and Missouri — giving members different environments and opportunities to get involved.</p>
+      <div class="facts"><div class="fact"><b>3</b><span>24/7 Servers</span></div><div class="fact"><b>FS25</b><span>Platform</span></div><div class="fact"><b>24/7</b><span>Operations</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servers" class="section">
+  <div class="section-head"><div><span class="kicker">01 / Operations</span><h2>Our Servers</h2></div><p>See the current status and player activity across Hilltop's three dedicated Farming Simulator 25 environments.</p></div>
+  <div class="server-grid">
+    <article class="server"><span class="server-code">HTC / 01</span><h3>Hilltop Contracting<br><span>Iowa</span></h3><div class="server-tags"><span>FS25</span><span>24 / 7</span><span>USA</span></div><div class="server-footer"><span class="online"><i></i> ONLINE</span><span class="player-count" data-server="Iowa">— / — PLAYERS</span><a class="server-link" href="#about">VIEW DETAILS →</a></div></article>
+    <article class="server"><span class="server-code">HTC / 02</span><h3>Hilltop Contracting<br><span>Arkansas</span></h3><div class="server-tags"><span>FS25</span><span>24 / 7</span><span>USA</span></div><div class="server-footer"><span class="online"><i></i> ONLINE</span><span class="player-count" data-server="Arkansas">— / — PLAYERS</span><a class="server-link" href="#about">VIEW DETAILS →</a></div></article>
+    <article class="server"><span class="server-code">HTC / 03</span><h3>Hilltop Contracting<br><span>Missouri</span></h3><div class="server-tags"><span>FS25</span><span>24 / 7</span><span>USA</span></div><div class="server-footer"><span class="online"><i></i> ONLINE</span><span class="player-count" data-server="Missouri">— / — PLAYERS</span><a class="server-link" href="#about">VIEW DETAILS →</a></div></article>
+  </div><p style="color:#68746b;font-size:10px;margin-top:18px">Player counts are informational only. Players join Hilltop servers through Farming Simulator 25; this website does not provide server information or joining.</p>
+</section>
+
+<section id="personnel" class="section personnel">
+  <div class="section-head"><div><span class="kicker">02 / Company</span><h2>Personnel</h2></div><p>The people responsible for keeping Hilltop Contracting organised, active and operating safely.</p></div>
+  <div class="people-grid">
+    <div class="role-title">MANAGEMENT</div>
+    <div class="person"><div class="avatar">D</div><div><b>Dego</b><small>Owner</small></div></div>
+    <div class="role-title">FOREMEN</div>
+    <div class="person"><div class="avatar">M</div><div><b>Money</b><small>Foreman</small></div></div>
+    <div class="person"><div class="avatar">L</div><div><b>Luke</b><small>Foreman</small></div></div>
+    <div class="person"><div class="avatar">C</div><div><b>Coco</b><small>Foreman</small></div></div>
+    <div class="person"><div class="avatar">G</div><div><b>Gory</b><small>Foreman</small></div></div>
+    <div class="role-title">ADMINISTRATION & SYSTEMS</div>
+    <div class="person"><div class="avatar">M</div><div><b>Madi</b><small>Company Secretary</small></div></div>
+    <div class="person"><div class="avatar">J</div><div><b>Joe</b><small>Systems Manager</small></div></div>
+    <div class="role-title">SAFETY</div>
+    <div class="person"><div class="avatar">D</div><div><b>Dagman</b><small>Company Safety Director</small></div></div>
+    <div class="person"><div class="avatar">D</div><div><b>Delta</b><small>Company Safety Director</small></div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div><span class="kicker">Join Hilltop Contracting</span><h2>Ready to get to work?</h2><p>Our community is organised through Discord. Join our Discord to find out more about the servers, operations and how to get involved.</p></div>
+  <a class="btn primary" href="https://discord.gg/jy8a7P9GcS" target="_blank">JOIN OUR DISCORD →</a>
+</section>
+</main>
+
+<footer><span>HILLTOP CONTRACTING / FS25</span><span>3 SERVERS • 24/7 OPERATIONS</span><span>© 2026 HILLTOP CONTRACTING</span></footer>
+
+<script>
+const serverStatus = {
+  Iowa: { online: true, players: null, max: null },
+  Arkansas: { online: true, players: null, max: null },
+  Missouri: { online: true, players: null, max: null }
+};
+// Player counts can later be populated from a secure server-status API/backend.
+// Do not put hosting credentials or private API keys in this browser code.
+
+const sections=[...document.querySelectorAll("main section[id]")],links=[...document.querySelectorAll(".links a")];
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-35% 0px -55% 0px"});
+sections.forEach(s=>obs.observe(s));
+// Live player counts are intentionally not hard-coded.
+// Once your hosting/API method is chosen, populate these from your backend endpoint.
+// Example expected response:
+// { "Iowa": {"online": true, "players": 7, "capacity": 16}, ... }
+async function updatePlayerCounts() {
+  // Replace this URL with your own secure backend endpoint later.
+  const endpoint = null;
+  if (!endpoint) return;
+  try {
+    const res = await fetch(endpoint, {cache:"no-store"});
+    const data = await res.json();
+    document.querySelectorAll(".player-count").forEach(el => {
+      const d = data[el.dataset.server];
+      if (d) el.textContent = `${d.players} / ${d.capacity} PLAYERS`;
+    });
+  } catch (_) {}
+}
+updatePlayerCounts();
+setInterval(updatePlayerCounts, 30000);
+</script>
+</body>
+</html>
